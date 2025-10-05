@@ -1,7 +1,7 @@
 import { Link, useNavigate } from 'react-router-dom'
-import { logout, getAccessToken, fetchCurrentUser } from '../lib/auth'
+import { logout, getAccessToken, fetchCurrentUser } from '../lib/auth.js'
 import { useEffect, useState } from 'react'
-import api from '../lib/api'
+import api from '../lib/api.js'
 import '../styles/components/Navbar.css'
 
 export default function Navbar() {

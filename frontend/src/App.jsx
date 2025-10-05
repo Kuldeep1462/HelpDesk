@@ -5,7 +5,7 @@ import Tickets from './pages/Tickets'
 import TicketNew from './pages/TicketNew'
 import TicketDetail from './pages/TicketDetail'
 import Navbar from './components/Navbar'
-import { getAccessToken } from './lib/auth'
+import { getAccessToken } from './lib/auth.js'
 import './styles/components/App.css'
 
 function PrivateRoute({ children }) {

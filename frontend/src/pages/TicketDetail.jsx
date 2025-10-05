@@ -1,8 +1,8 @@
 import { useEffect, useMemo, useState } from 'react'
 import { useParams } from 'react-router-dom'
-import api from '../lib/api'
+import api from '../lib/api.js'
 import CommentList from '../components/CommentList'
-import { fetchCurrentUser } from '../lib/auth'
+import { fetchCurrentUser } from '../lib/auth.js'
 import '../styles/components/TicketDetail.css'
 
 export default function TicketDetail() {

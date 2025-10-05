@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { useNavigate, Link } from 'react-router-dom'
-import api from '../lib/api'
-import { setTokens } from '../lib/auth'
+import api from '../lib/api.js'
+import { setTokens } from '../lib/auth.js'
 import '../styles/components/Login.css'
 
 export default function Login() {
