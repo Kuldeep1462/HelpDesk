@@ -38,7 +38,7 @@ export default function Login() {
         </button>
       </form>
       <div className="login-register-link">No account? <Link to="/register" className="text-blue-600">Register</Link></div>
-      <div className='register-login-link'>For admin login- admin@mail.com  password- admin@123</div>
+      <div className='register-login-link'>For admin login- Admin12.com  password- admin@123</div>
     </div>
   )
 }

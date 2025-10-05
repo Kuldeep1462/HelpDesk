@@ -108,6 +108,7 @@ CORS_ALLOW_CREDENTIALS = True
 CORS_ALLOWED_ORIGINS = [
     os.getenv("FRONTEND_ORIGIN", "http://localhost:5173"),
     "https://helpdesk-frontend.vercel.app",
+    "https://helpdesk-ks.vercel.app/",
     "https://helpdesk-mini.vercel.app",
 ]
 CORS_ALLOW_ALL_ORIGINS = True
