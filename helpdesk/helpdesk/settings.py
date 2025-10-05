@@ -116,4 +116,10 @@ CORS_ALLOWED_ORIGINS = [
     "https://helpdesk-1afn.onrender.com",
     "https://helpdesk-ks.vercel.app",
 ]
+
+# Fix for CORS error: remove path from origin URLs
+CORS_ALLOWED_ORIGINS = [
+    origin.rstrip('/') for origin in CORS_ALLOWED_ORIGINS
+]
+
 CORS_ALLOW_ALL_ORIGINS = True
