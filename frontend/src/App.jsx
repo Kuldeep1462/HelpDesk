@@ -1,11 +1,11 @@
 import { Routes, Route, Navigate } from 'react-router-dom'
-import Login from './pages/Login.jsx'
-import Register from './pages/Register.jsx'
-import Tickets from './pages/Tickets.jsx'
-import TicketNew from './pages/TicketNew.jsx'
-import TicketDetail from './pages/TicketDetail.jsx'
-import Navbar from './components/Navbar.jsx'
-import { getAccessToken } from './lib/auth.js'
+import Login from './pages/Login'
+import Register from './pages/Register'
+import Tickets from './pages/Tickets'
+import TicketNew from './pages/TicketNew'
+import TicketDetail from './pages/TicketDetail'
+import Navbar from './components/Navbar'
+import { getAccessToken } from './lib/auth'
 import './styles/components/App.css'
 
 function PrivateRoute({ children }) {
