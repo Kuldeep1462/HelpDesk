@@ -5,7 +5,10 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 SECRET_KEY = os.getenv("SECRET_KEY", "django-insecure-a(xjc1kyzvw6^dapv)v_sk!0&-jjy$7jirit3^)lht9zr!-0_@")
 DEBUG = os.getenv("DEBUG", "True") == "True"
-ALLOWED_HOSTS = os.getenv("ALLOWED_HOSTS", "localhost,127.0.0.1,helpdesk-1afn.onrender.com").split(",")
+ALLOWED_HOSTS = os.getenv(
+    "ALLOWED_HOSTS",
+    "helpdesk-ks.vercel.app,localhost,127.0.0.1,helpdesk-1afn.onrender.com"
+).split(",")
 
 INSTALLED_APPS = [
     "django.contrib.admin",
@@ -77,7 +80,7 @@ USE_TZ = True
 
 STATIC_URL = "static/"
 STATICFILES_DIRS = [BASE_DIR / "static"]
-STATIC_ROOT = BASE_DIR / "staticfiles"
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 # Production settings
 if not DEBUG:
@@ -103,12 +106,14 @@ REST_FRAMEWORK = {
     },
     "EXCEPTION_HANDLER": "helpdesk.utils.exception_handler",
 }
-
+CSRF_TRUSTED_ORIGINS = [
+    "https://helpdesk-1afn.onrender.com",
+    "https://helpdesk-ks.vercel.app",
+]
 CORS_ALLOW_CREDENTIALS = True
 CORS_ALLOWED_ORIGINS = [
     os.getenv("FRONTEND_ORIGIN", "http://localhost:5173"),
-    "https://helpdesk-frontend.vercel.app",
-    "https://helpdesk-ks.vercel.app/",
-    "https://helpdesk-mini.vercel.app",
+    "https://helpdesk-1afn.onrender.com",
+    "https://helpdesk-ks.vercel.app",
 ]
 CORS_ALLOW_ALL_ORIGINS = True

@@ -24,14 +24,11 @@ from django.http import JsonResponse
 from rest_framework_simplejwt.views import TokenObtainPairView, TokenRefreshView
 
 urlpatterns = [
-    # Root redirects to tickets list
     path('', lambda request: redirect('ticket-list-create'), name='home'),
     path('admin/', admin.site.urls),
     path('users/', include('users.urls')),
     path('tickets/', include('tickets.urls')),
-    # REST API routes
     path('api/tickets/', include('tickets.api_urls')),
-    # API base
     path('api/health/', lambda request: JsonResponse({"status": "ok"})),
     path('api/tokens/', TokenObtainPairView.as_view(), name='token_obtain_pair'),
     path('api/tokens/refresh/', TokenRefreshView.as_view(), name='token_refresh'),
