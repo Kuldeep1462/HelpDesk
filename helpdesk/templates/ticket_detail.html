@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{{ ticket.title }} - HelpDesk Mini</title>
+</head>
+<body>
+    <h1>{{ ticket.title }}</h1>
+    <p>{{ ticket.description }}</p>
+    <p>Status: {{ ticket.status }}</p>
+    <p>Created by: {{ ticket.created_by.username }}</p>
+    <p>Assigned to: {{ ticket.assigned_to.username if ticket.assigned_to else "Unassigned" }}</p>
+
+    <h2>Comments</h2>
+    <ul>
+        {% for comment in ticket.comments.all %}
+        <li>{{ comment.author.username }}: {{ comment.content }}</li>
+        {% empty %}
+        <li>No comments yet.</li>
+        {% endfor %}
+    </ul>
+
+    <h3>Add Comment</h3>
+    <form method="POST" action="{% url 'ticket-add-comment' ticket.id %}">
+        {% csrf_token %}
+        <textarea name="content" required></textarea><br>
+        <button type="submit">Add Comment</button>
+    </form>
+
+    <br>
+    <a href="{% url 'ticket-list-create' %}">Back to Tickets</a>
+</body>
+</html>

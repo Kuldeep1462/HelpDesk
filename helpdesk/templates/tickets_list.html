@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Tickets - HelpDesk Mini</title>
+</head>
+<body>
+    <h1>All Tickets</h1>
+    <a href="{% url 'ticket-create' %}">Create New Ticket</a>
+    <ul>
+        {% for ticket in tickets %}
+        <li>
+            <a href="{% url 'ticket-detail' ticket.id %}">{{ ticket.title }}</a>
+            - Status: {{ ticket.status }}
+            - Created by: {{ ticket.created_by.username }}
+        </li>
+        {% empty %}
+        <li>No tickets found.</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

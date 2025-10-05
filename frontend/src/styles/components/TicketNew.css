@@ -1,0 +1,50 @@
+.ticket-new-container {
+  max-width: 32rem;
+}
+
+.ticket-new-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.ticket-new-form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  background-color: white;
+  padding: 1rem;
+  border-radius: 0.25rem;
+  border: 1px solid #e5e7eb;
+}
+
+.ticket-new-input,
+.ticket-new-textarea {
+  width: 100%;
+  border: 1px solid #e5e7eb;
+  border-radius: 0.25rem;
+  padding: 0.5rem;
+}
+
+.ticket-new-textarea {
+  min-height: 120px;
+}
+
+.ticket-new-error {
+  font-size: 0.875rem;
+  color: #dc2626;
+}
+
+.ticket-new-button {
+  background-color: #2563eb;
+  color: white;
+  border-radius: 0.25rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+
+.ticket-new-button:disabled {
+  opacity: 0.5;
+}

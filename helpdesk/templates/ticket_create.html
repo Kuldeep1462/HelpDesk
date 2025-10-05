@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Create Ticket - HelpDesk Mini</title>
+</head>
+<body>
+    <h1>Create New Ticket</h1>
+    <form method="POST" action="{% url 'ticket-list-create' %}">
+        {% csrf_token %}
+        <label>Title:</label><br>
+        <input type="text" name="title" required><br><br>
+
+        <label>Description:</label><br>
+        <textarea name="description" required></textarea><br><br>
+
+        <button type="submit">Create Ticket</button>
+    </form>
+
+    <br>
+    <a href="{% url 'ticket-list-create' %}">Back to Tickets</a>
+</body>
+</html>

@@ -1,0 +1,27 @@
+.comment-list-empty {
+  font-size: 0.875rem;
+  color: #6b7280;
+}
+
+.comment-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.comment-item {
+  background-color: white;
+  padding: 0.75rem;
+  border-radius: 0.25rem;
+  border: 1px solid #e5e7eb;
+}
+
+.comment-content {
+  font-size: 0.875rem;
+}
+
+.comment-author {
+  font-size: 0.75rem;
+  color: #6b7280;
+  margin-top: 0.25rem;
+}

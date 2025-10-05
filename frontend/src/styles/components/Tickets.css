@@ -1,0 +1,68 @@
+.loading-message,
+.error-message {
+  text-align: center;
+  padding: 1rem;
+}
+
+.error-message {
+  color: #dc2626;
+}
+
+.tickets-container {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.tickets-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.tickets-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.search-input {
+  border: 1px solid #e5e7eb;
+  border-radius: 0.25rem;
+  padding: 0.5rem;
+  font-size: 0.875rem;
+}
+
+.no-tickets-message {
+  background-color: white;
+  padding: 2rem;
+  border-radius: 0.25rem;
+  border: 1px solid #e5e7eb;
+  text-align: center;
+}
+
+.no-tickets-icon {
+  font-size: 3rem;
+  margin-bottom: 0.75rem;
+}
+
+.no-tickets-text {
+  color: #4b5563;
+  margin-bottom: 1rem;
+}
+
+.add-ticket-button {
+  display: inline-block;
+  background-color: #2563eb;
+  color: white;
+  border-radius: 0.25rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+
+.tickets-grid {
+  display: grid;
+  gap: 0.75rem;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+}
