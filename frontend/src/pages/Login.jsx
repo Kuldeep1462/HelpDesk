@@ -39,7 +39,7 @@ export default function Login() {
       </form>
       <div className="login-register-link">No account? <Link to="/register" className="text-blue-600">Register</Link></div>
       <div className='register-login-link'>For admin login- Admin12  password- admin@123</div>
-      <div className='register-login-link'>For agent login- agent12  password- agnent@123</div>
+      <div className='register-login-link'>For agent login- agent12  password- agent@123</div>
     </div>
   )
 }
